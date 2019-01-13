@@ -2,6 +2,9 @@
 
 DB=tpch
 SCALE=1
+DATADIR=/tmp/tpch-data/
+
+make;
 
 dropdb --if-exists $DB;
 createdb $DB;
@@ -12,5 +15,5 @@ for i in `ls *.tbl`; do
     echo $i;
 done;
 
-mv *.csv /tmp;
+mv *.csv $DATADIR;
 psql -d tpch -f tpch-build-db.sql;
