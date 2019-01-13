@@ -13,7 +13,7 @@ BEGIN;
 		P_COMMENT		VARCHAR(23)
 	);
 
-	COPY part FROM '/Users/jack/work/tpch-dbgen/part.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY part FROM '/tmp/tpch-data/part.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -25,7 +25,7 @@ BEGIN;
 		R_COMMENT	VARCHAR(152)
 	);
 
-	COPY region FROM '/Users/jack/work/tpch-dbgen/region.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY region FROM '/tmp/tpch-data/region.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -38,7 +38,7 @@ BEGIN;
 		N_COMMENT		VARCHAR(152)
 	);
 
-	COPY nation FROM '/Users/jack/work/tpch-dbgen/nation.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY nation FROM '/tmp/tpch-data/nation.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -54,7 +54,7 @@ BEGIN;
 		S_COMMENT		VARCHAR(101)
 	);
 
-	COPY supplier FROM '/Users/jack/work/tpch-dbgen/supplier.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY supplier FROM '/tmp/tpch-data/supplier.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -71,7 +71,7 @@ BEGIN;
 		C_COMMENT		VARCHAR(117)
 	);
 
-	COPY customer FROM '/Users/jack/work/tpch-dbgen/customer.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY customer FROM '/tmp/tpch-data/customer.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -86,7 +86,7 @@ BEGIN;
                 PRIMARY KEY (PS_PARTKEY, PS_SUPPKEY)
 	);
 
-	COPY partsupp FROM '/Users/jack/work/tpch-dbgen/partsupp.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY partsupp FROM '/tmp/tpch-data/partsupp.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -104,7 +104,7 @@ BEGIN;
 		O_COMMENT		VARCHAR(79)
 	);
 
-	COPY orders FROM '/Users/jack/work/tpch-dbgen/orders.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY orders FROM '/tmp/tpch-data/orders.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
@@ -130,7 +130,7 @@ BEGIN;
                 PRIMARY KEY (L_ORDERKEY, L_LINENUMBER)  
 	);
 
-	COPY lineitem FROM '/Users/jack/work/tpch-dbgen/lineitem.csv' WITH (FORMAT csv, DELIMITER '|');
+	COPY lineitem FROM '/tmp/tpch-data/lineitem.csv' WITH (FORMAT csv, DELIMITER '|');
 
 COMMIT;
 
