@@ -15,5 +15,6 @@ for i in `ls *.tbl`; do
     echo $i;
 done;
 
+mkdir -p $DATADIR;
 mv *.csv $DATADIR;
 psql -d tpch -f tpch-build-db.sql;
